@@ -7,6 +7,11 @@ import LoginByPhone from './components/User/LoginByPhone'
 import ConfirmOTP from './components/User/ConfirmOTP'
 import LoginByEmail from './components/User/LoginByEmail'
 import { getUserDetailsAction } from './slices/UserSlices'
+<<<<<<< HEAD
+=======
+import SignUp from './components/User/SignUp'
+import Verify_Email_on_Signup from './components/User/Verify_Email_on_Signup'
+>>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a
 // import ProtectedRoute from '../protectedRoute'
 
 
@@ -32,6 +37,11 @@ function App() {
         <Route exact path='/login' element={<LoginByEmail/>}/>
         <Route exact path='/loginByPhone' element={<LoginByPhone/>}/>
         <Route exact path='/confirmOTP' element={<ConfirmOTP/>}/>
+<<<<<<< HEAD
+=======
+        <Route exact path='/signUp' element={<SignUp/>}/>
+        <Route exact path='/verify-email' element={<Verify_Email_on_Signup/>}/>
+>>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a
 
         {/* conditional routing */}
         {/* <Route element={<ProtectedRoute/>}> */}

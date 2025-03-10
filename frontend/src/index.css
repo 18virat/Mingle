@@ -1,8 +1,13 @@
 @import "tailwindcss"; 
 @plugin "daisyui";
 
+<<<<<<< HEAD
   .scrollbar-hidden {
     scrollbar-width: none;
   }
  
  
+=======
+
+
+>>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a

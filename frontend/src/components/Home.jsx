@@ -46,7 +46,7 @@ const Home = () => {
                         <div>
                             <DuoIcon className="hover:text-cyan-700 mx-1 cursor-pointer" />
                             <CallIcon className="hover:text-cyan-700 mx-1 cursor-pointer" />
-                            {/* <MoreHorizIcon className="hover:text-cyan-700 mx-1 cursor-pointer" /> */}
+                            {/*<MoreHorizIcon className="hover:text-cyan-700 mx-1 cursor-pointer" /> */}
                             <SimpleDialogDemo/>
                         </div>
                     </div>

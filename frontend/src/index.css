@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 @import "tailwindcss"; 
 @plugin "daisyui";
 
@@ -5,9 +10,35 @@
   .scrollbar-hidden {
     scrollbar-width: none;
   }
- 
- 
-=======
-
-
->>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a
+  .online::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #00ff00; /* Green */
+    border-radius: 50%;
+    top: 2px;   /* Moves dot to the top */
+    right: 2px; /* Moves dot to the right */
+    border: 2px solid white;
+  }
+  
+  @keyframes pulseBlink {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .text-blink {
+    animation: pulseBlink 1.2s infinite ease-in-out;
+  }
+  
+  

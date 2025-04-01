@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:500
 app.use(express.json());
 app.use(cookieParser());
 
+
 app.use(cors(
     {
         origin: "http://localhost:5173",
@@ -25,6 +26,8 @@ app.use(cors(
 
 
 app.use('/mingle/v1',require('./Routes/UserRoutes'))
+app.use('/mingle/v1',require('./Routes/MessagesRoutes'))
+app.use('/mingle/v1',require('./Routes/PaymentRoute'))
 
 
 connect()

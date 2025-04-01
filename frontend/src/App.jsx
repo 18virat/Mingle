@@ -1,3 +1,4 @@
+
 import { useDispatch,useSelector} from 'react-redux'
 import { useEffect } from 'react'
 import { Route,Routes,BrowserRouter} from 'react-router-dom'
@@ -7,11 +8,15 @@ import LoginByPhone from './components/User/LoginByPhone'
 import ConfirmOTP from './components/User/ConfirmOTP'
 import LoginByEmail from './components/User/LoginByEmail'
 import { getUserDetailsAction } from './slices/UserSlices'
-<<<<<<< HEAD
-=======
+
+
 import SignUp from './components/User/SignUp'
 import Verify_Email_on_Signup from './components/User/Verify_Email_on_Signup'
->>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a
+import Invitation from './assets/utilityComponents/Invitation'
+import PaymentSuccess from './components/Payments/PaymentSuccess'
+
+
+
 // import ProtectedRoute from '../protectedRoute'
 
 
@@ -37,15 +42,17 @@ function App() {
         <Route exact path='/login' element={<LoginByEmail/>}/>
         <Route exact path='/loginByPhone' element={<LoginByPhone/>}/>
         <Route exact path='/confirmOTP' element={<ConfirmOTP/>}/>
-<<<<<<< HEAD
-=======
+
         <Route exact path='/signUp' element={<SignUp/>}/>
+        <Route exact path='/signUp/:id' element={<Invitation/>}/>
         <Route exact path='/verify-email' element={<Verify_Email_on_Signup/>}/>
->>>>>>> 11dc8b690142b8588c7fbcc3b49d58fa0470dc4a
+       
+       
 
         {/* conditional routing */}
         {/* <Route element={<ProtectedRoute/>}> */}
         <Route exact path='/home' element={<Home/>}/>
+        <Route exact path='/paymentSuccess/:paymentId' element={<PaymentSuccess/>}/>
         {/* </Route> */}
 
       

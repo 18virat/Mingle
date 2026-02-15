@@ -62,7 +62,7 @@ const Verify_Email_on_Signup = () => {
 
   useEffect(() => {
     // Only allow access of this route when user has filled the signup form
-    if (success && invite_data) {
+    if (success) {
       dispatch(AddToFriend({ id: invite_data, email: email }));
       navigate("/login");
     }

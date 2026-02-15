@@ -13,14 +13,18 @@ exports.loginUser=async(req,res)=>{
     const {email,password}=req.body;
 
     try{
+          
+        if(!email){
+            return res.status(200).json({success:false,message:"Invalid Credentials"})
+        }
         const user = await User.findOne({ email }).select("+password");
         if(!user){
-            return res.status(400).json({success:false,message:"User Not Found"})
+            return res.status(200).json({success:false,message:"Invalid Credentials"})
         }
         const isMatch=await bcrypt.compare(password,user.password);
         
         if(!isMatch){
-            return res.status(400).json({success:false,message:"Invalid Credentials"})
+            return res.status(200).json({success:false,message:"Invalid Credentials"})
         }
 
         setToken(user,200,res)
@@ -326,6 +330,19 @@ exports.getAllUser=async(req,res)=>{
     });
 }
 
+//get user details by id
+
+exports.getUserDetailsById=async(req,res)=>{
+    const id=req.params.id
+    try {
+        const user=await User.findById(id)
+        res.status(200).json({
+            user
+        })
+    } catch (error) {
+        res.status(500).json({success:false,message:"Internal Server Error",error:error.message})
+    }
+}
 //adding friend 
 
 exports.addFriend = async (req, res) => {

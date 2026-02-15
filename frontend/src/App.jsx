@@ -14,6 +14,8 @@ import SignUp from './components/User/SignUp'
 import Verify_Email_on_Signup from './components/User/Verify_Email_on_Signup'
 import Invitation from './assets/utilityComponents/Invitation'
 import PaymentSuccess from './components/Payments/PaymentSuccess'
+import LandingPage from './components/LandingPage'
+import VideoCall from './components/Chats/VideoCall'
 
 
 
@@ -38,7 +40,7 @@ function App() {
 
        
        
-        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/' element={<LandingPage/>}/>
         <Route exact path='/login' element={<LoginByEmail/>}/>
         <Route exact path='/loginByPhone' element={<LoginByPhone/>}/>
         <Route exact path='/confirmOTP' element={<ConfirmOTP/>}/>
@@ -46,6 +48,7 @@ function App() {
         <Route exact path='/signUp' element={<SignUp/>}/>
         <Route exact path='/signUp/:id' element={<Invitation/>}/>
         <Route exact path='/verify-email' element={<Verify_Email_on_Signup/>}/>
+        <Route exact path='/facetime' element={<VideoCall/>}/>
        
        
 

@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./backend
+    container_name: mern_backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    command: npm start
+
+  frontend:
+    build: ./frontend
+    container_name: mern_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

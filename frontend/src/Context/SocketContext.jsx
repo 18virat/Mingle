@@ -20,7 +20,7 @@ export const SocketProvider = (props) => {
 
         if (user) {
             // console.log("Creating socket...");
-            const newSocket = io("http://localhost:5000",{
+            const newSocket = io("https://mingle-5fgl.onrender.com",{
                 query: {
                     userId: user._id,
                 },

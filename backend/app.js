@@ -16,7 +16,7 @@ app.use(cookieParser());
 
 app.use(cors(
     {
-        origin: "https://mingle-mocha.vercel.app",
+        origin: ["https://mingle-mocha.vercel.app","https://mingle-mti4ikcm7-jpsinghs-projects-a64333cf.vercel.app"],
         credentials:true,            //access-control-allow-credentials:true
         optionSuccessStatus:200
         
